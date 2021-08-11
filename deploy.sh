@@ -11,7 +11,7 @@ cd dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
-
+#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 
 git init
 git add -A
 git commit -m 'deploy'
