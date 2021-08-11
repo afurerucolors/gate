@@ -12,5 +12,4 @@ deploy:
  github_token: $GITHUB_TOKEN
  local_dir: dist
  on:
-   repo: afurerucolors@github.io
    branch: main
