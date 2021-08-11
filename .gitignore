@@ -1,5 +1,7 @@
 .DS_Store
-node_modules
+node_modules 
+/dist/
+# /src/assets/gallery/
 
 
 # local env files
@@ -13,6 +15,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Editor directories and files
+dist
 .idea
 .vscode
 *.suo
