@@ -4,7 +4,9 @@
       <!-- <Slider></Slider> -->
       <v-img src="@/assets/gallery/header.jpg" />
     </v-container>
-    <v-container fluid class="header pa-0"> Headline of dashboard </v-container>
+    <!-- <v-container fluid class="header pa-0"> 
+      Headline of dashboard 
+    </v-container> -->
   </v-container>
 </template>
 <script>
