@@ -12,5 +12,5 @@ deploy:
  github_token: $GITHUB_TOKEN
  local_dir: dist
  on:
-   repo: github.com/afurerucolors/afurerucolors@github.io
+   repo: afurerucolors/gate
    branch: main
