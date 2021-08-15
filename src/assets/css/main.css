@@ -1,0 +1,43 @@
+@import url('../fonts/fonts.css');
+
+.v-application {
+    font-family: 'Karla';
+    font-weight: 500;
+    color: aliceblue !important;
+
+}
+
+.bodyText{
+    font-size:14px;
+    letter-spacing: 0.4px;
+    border-radius: 20px;
+    width: 100;
+    color: rgb(240, 232, 234);
+    -webkit-backdrop-filter: blur(12px) invert();
+    /* background-color: rgba(18, 0, 68,0.7); */
+}
+
+.navbarTitle {
+    font-family: 'Baloo 2';
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: 0.2vw;
+    /* text-transform: uppercase; */
+}
+
+
+.copyrightText {
+    font-size:12px;
+}
+.footerText {
+    font-size:13px;
+
+}
+
+.contactIcon {
+    
+}
+
+
+
+

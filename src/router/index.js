@@ -1,33 +1,30 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-// import App from '../App.vue'
-
-import Landing from '../views/main/LandingPage.vue'
+import Gallery from '../views/main/gallery.vue'
+import About from '../views/main/landing-page.vue'
+import Contact from '../views/main/contact.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'dashboard',
-    component: Landing
-  },
-  {
-    path: '/home',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: About
+  },
+  {
+    path: '/artworks',
+    name: 'Artworks',
+    component: Gallery,
+
+
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   }
 ]
-
-
-
-
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
