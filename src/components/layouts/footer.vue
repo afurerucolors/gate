@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless>
+  <v-footer dark padless class="footer ">
     <v-container fluid class="dark">
       <v-row class="bottomNavbar">
         <v-spacer></v-spacer>
@@ -53,5 +53,9 @@ export default {
 <style scoped>
 .copyrightText {
   font-size: 10;
+}
+.footer {
+  background-image: linear-gradient(to top,rgba(57, 238, 126, 0.2),rgba(0,0,0,0));
+  background-color: rgb(41,41,41) !important;
 }
 </style>
