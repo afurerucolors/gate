@@ -23,7 +23,7 @@
                   >
                     Afureru Colors
                   </v-card-text>
-                  <v-card-text
+                  <!-- <v-card-text
                     class="
                       text-center
                       pb-0
@@ -37,7 +37,7 @@
                     I am not accepting any job/work request right now.
                     <br />
                     Will be back later!
-                  </v-card-text>
+                  </v-card-text> -->
                   <v-card-text class="text-center pb-0 textBody blue-grey--text text--lighten-3">
                     ✎ English/Indonesian
                     <br />
@@ -116,7 +116,7 @@ export default {
     return {
       accounts: [
         {
-          name: "PIXIV",
+          name: "Pixiv",
           logo: "",
           img: "",
           link: "",

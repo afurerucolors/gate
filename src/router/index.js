@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import LandingPage from '../views/main/landing-page.vue'
-// import About from '../views/main/about.vue'
-// import Faq from '../views/main/faq.vue'
+import LandingPage from '../views/main/landing-page.vue'
+import About from '../views/main/about.vue'
+import Faq from '../views/main/faq.vue'
 import PortalLink from '../views/main/portallink.vue'
 import MainLayout from '../views/main/main-layout.vue'
-// import Request from '../views/main/request.vue'
+import Request from '../views/main/request.vue'
 
 Vue.use(VueRouter)
 
@@ -46,9 +46,9 @@ const routes = [
     {
         path: '/:catchAll(.*)',
         name: 'NotFound',
-        // component: MainLayout,
-        component: PortalLink,
-        redirect: '/Links',
+        component: MainLayout,
+        redirect: '/',
+        // component: PortalLink,
     },
 
 ]
