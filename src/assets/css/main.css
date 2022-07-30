@@ -1,51 +1,36 @@
 @import url('../fonts/fonts.css');
 @import url('./m-preview.css');
+@import url('./navbar.css');
+@import url('./text-css.css');
 ::-webkit-scrollbar {
     width: 3px;
 }
 
 ::-webkit-scrollbar-track {
-    background: hsl(244, 100%, 6%);
+    background: hsl(204, 98%, 64%);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-image: -webkit-linear-gradient( rgba(47, 0, 255, 0), rgb(120, 255, 214, 0.9), rgba(47, 0, 255, 0));
-}
-
-.pageLogo {
-    padding-top: 15px;
-    height: 90px;
-}
-
-.navbarTitle {
-    font-family: 'Karla';
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 0.2vw;
-    /* text-transform: uppercase; */
-}
-
-.navbarContainer {
-    background-image: linear-gradient(/* hsl(244, 100%, 6%), */
-    rgba(0, 132, 255, 0.1), rgb(31, 31, 31));
-    /* background-color: rgb(0, 2, 119) !important; */
-    background-color: rgb(31, 31, 31) !important;
-}
-
-.navbarImage {
-    height: 100px;
-    margin-top: -20px;
-    transition: ease-in-out 200ms;
-}
-
-.navbarText {
-    font-size: 13px !important;
+    background-image: -webkit-linear-gradient( rgba(47, 0, 255, 0), rgba(184, 255, 234, 0.9), rgba(47, 0, 255, 0));
 }
 
 .v-application {
     font-family: 'Karla';
     font-weight: 500;
     color: aliceblue !important;
+}
+
+.thanks {
+    font-family: "Karla";
+    font-weight: 700;
+    font-size: large;
+}
+
+.linksLogo {
+    color: green;
+    font-family: "Karla";
+    font-weight: 700;
+    font-size: small;
 }
 
 .contentDivider {
@@ -59,10 +44,6 @@
     padding-left: 1px;
     display: inline;
     background-image: -webkit-linear-gradient(rgba(47, 0, 255, 0), rgb(66, 242, 255, 0.5), rgb(120, 255, 214, 0.6), rgb(66, 242, 255, 0.5), rgba(47, 0, 255, 0));
-}
-
-.copyrightText {
-    font-size: 12px;
 }
 
 .footerText {

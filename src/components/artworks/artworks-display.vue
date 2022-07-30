@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="worksContainer pa-0 mt-2 px-8">
-    <v-container class="stackContainer mt-4 pt-0">
+    <v-container class="stackContainer mt-4 pt-0" >
       <stack
         :column-min-width="270"
         :gutter-width="8"
@@ -14,14 +14,13 @@
             @click="
               $store.commit('resources/setLightbox', {
                 index: i,
-                type: 'gallery',
               })
             "
           >
             <div class="imageCover"></div>
             <img
               :key="i"
-              :src="image.src"
+              :src="image.link ? image.link : require('@/assets/layouts/portfolio/' +image.src)"
               :alt="'fail to load' + image.title"
               class="image ma-0 pa-0"
             />
@@ -43,36 +42,24 @@
         Please make sure your internet connection and reload the page. -->
       </v-container>
     </v-container>
-    <LightBox
-      :show="this.$store.state.resources.lightbox.show"
-      :items="this.$store.state.resources.gallery[groups].images"
-      type="gallery"
-    ></LightBox>
   </v-container>
 </template>
 <script>
-// import { mapState } from "vuex";
 import { Stack, StackItem } from "vue-stack-grid";
 export default {
-  props: ["groups"],
   components: { Stack, StackItem },
   data() {
     return {};
   },
   computed: {
     images() {
-      return this.$store.state.resources.gallery[groups].images;
+      return this.$store.state.resources.worksInShow;
     },
-    // ...mapState({
-    //   images: (state) => state.resources.gallery.images,
-    // }),
   },
-  methods: {},
-  created() {
-    if (this.$store.state.resources.gallery[groups].images.length == 0) {
-      this.$store.dispatch("resources/getImagess", groups);
-    }
+  methods: {
+    
   },
+  created() {},
 };
 </script>
 <style scoped>
@@ -138,6 +125,4 @@ export default {
   backdrop-filter: brightness(120%) saturate(110%);
 }
 
-.imageContainer:hover {
-}
 </style>

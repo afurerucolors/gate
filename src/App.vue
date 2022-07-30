@@ -1,50 +1,6 @@
 <template>
   <v-app>
-    <div class="mainApp">
-      <Navbar></Navbar>
-      <v-main>
-        <v-container fluid class="pa-0 ma-0">
-          <router-view></router-view>
-        </v-container>
-      </v-main>
-      <Footer></Footer>
-    </div>
-    <Loader></Loader>
-    <LightBox
-      :show="this.$store.state.resources.lightbox.show"
-      :items="this.$store.state.resources.gallery.images"
-      type="gallery"
-    ></LightBox>
-      <LightBox
-      :show="this.$store.state.resources.portfolioLightbox.show"
-      :items="this.$store.state.resources.portfolio.images"
-      type="portfolio"
-    ></LightBox>
-
-    <v-tooltip left color="black">
-      <template v-slot:activator="{ on, attrs }">
-        <div class="btnTop">
-          <v-btn
-            icon
-            dark
-            v-bind="attrs"
-            v-on="on"
-            @click="
-              $vuetify.goTo(0, {
-                duration: 700,
-                offset: 500,
-                easing: 'easeInOutQuad',
-              })
-            "
-          >
-            <v-avatar class="btnTopAvatar" size="40">
-              <v-icon>mdi-arrow-up-bold</v-icon>
-            </v-avatar>
-          </v-btn>
-        </div>
-      </template>
-      <span>Go to Top</span>
-    </v-tooltip>
+    <router-view></router-view>
   </v-app>
 </template>
 
@@ -52,6 +8,7 @@
 import Navbar from "@/components/layouts/navbar.vue";
 import Footer from "@/components/layouts/footer.vue";
 import Loader from "@/components/layouts/loader.vue";
+import ScrollToTopButton from "@/components/layouts/scroll-to-top-button.vue";
 import LightBox from "@/components/layouts/lightbox.vue";
 
 export default {
@@ -61,30 +18,34 @@ export default {
     Navbar,
     Footer,
     Loader,
+    ScrollToTopButton,
     LightBox,
   },
   async created() {
-    await this.$store.dispatch("resources/getImages").then(() => {});
+    // if (this.$store.state.resources.info.groups == 0) {
+    //   this.$store.dispatch("resources/getInfo");
+    // }
   },
+
+
 };
 </script>
 <style scoped>
 .mainApp {
-  background-color: #1f1f1f !important;
+  /* background-color: #1f1f1f !important; */
   /* background-color: hsl(244, 100%, 6%) !important; */
 }
-
-.btnTop {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin-right: 10px;
-  margin-bottom: 20px;
+.mainApp {
+  /* background-color: #1f1f1f !important; */
+  background-color: rgb(255, 255, 255) !important;
 }
 
-
-.btnTopAvatar{
-  /* background-color: rgb(0, 0, 44,0.5) ; */
-  backdrop-filter: blur(5px);
+.optionPanel {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 20;
+  margin-right: 20px;
 }
 </style>

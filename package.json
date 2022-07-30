@@ -11,9 +11,11 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "pixiv-app-api": "^1.2.1",
     "vue": "^2.6.11",
     "vue-collage-slideshow": "^0.2.8",
     "vue-cool-lightbox": "^2.7.4",
+    "vue-infinite-scroll": "^2.0.2",
     "vue-router": "^3.2.0",
     "vue-stack-grid": "^1.2.2",
     "vuetify": "^2.5.8",
