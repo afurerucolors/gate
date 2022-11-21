@@ -1,24 +1,9 @@
 <template>
   <nav>
-    <v-app-bar
-      app
-      flat
-      absolute
-      fade-img-on-scroll
-      light
-      fixed
-      class="navbarContainer ma-0"
-      height="150"
-    >
-      <v-row
-        class="text-center py-8 pb-16"
-        justify="center"
-        style="backdrop-filter: blur(0px)"
-      >
+    <v-app-bar app flat absolute fade-img-on-scroll light fixed class="navbarContainer ma-0" height="150">
+      <v-row class="text-center py-8 pb-16" justify="center" style="backdrop-filter: blur(0px)">
         <v-col cols="12" class="py-0">
-          
-            <img src="@/assets/layouts/logo.png" alt="" class="pageLogo" @click="$router.replace('/')"/>
-
+          <img src="@/assets/images/layouts/logo.png" alt="" class="navbarLogo" @click="$router.replace('/')" />
         </v-col>
         <v-col cols="12" align-self="center" class="navbarCol2 pa-0">
           <span class="navbarTitle">Afureru Colors</span>
@@ -26,44 +11,27 @@
       </v-row>
 
       <template v-slot:img="{ props }">
-        <v-img
-          v-bind="props"
-          src="@/assets/layouts/navbar-backdrop.png"
-          class="navbarImage"
-        ></v-img>
+        <v-img v-bind="props" src="@/assets/images/layouts/navbar-backdrop.png" class="navbarImage"></v-img>
       </template>
+
       <template v-slot:extension>
         <v-tabs centered class="mb-8">
-          <v-tabs-slider class="tabSlider"></v-tabs-slider>
-
-          <v-tab
-            class="tab"
-            v-for="item in appbarItems"
-            active-class="activeTab"
-            :key="item.title"
-            :href="item.link"
-            :to="item.link"
-          >
-            <span class="navbarText">{{ item.title }}</span>
+          <v-tabs-slider class="navbarTabSlider"></v-tabs-slider>
+          <v-tab class="navbarTab" v-for="navbarTab in navbarTabs" active-class="activeTab" :key="navbarTab.title" :href="navbarTab.link"
+            :to="navbarTab.link">
+            <span class="navbarTabText">{{ navbarTab.title }}</span>
           </v-tab>
         </v-tabs>
       </template>
+
     </v-app-bar>
-    <!-- <v-navigation-drawer
-      app
-      v-model="drawer"
-      color="transparent"
-      class="sideBar"
-    >
-    </v-navigation-drawer> -->
   </nav>
 </template>
 <script>
 export default {
   data() {
     return {
-      drawer: false,
-      appbarItems: [
+      navbarTabs: [
         {
           title: "Artworks",
           link: "/",
@@ -80,61 +48,94 @@ export default {
           title: "About",
           link: "/about",
         },
+        {
+          title: "Links",
+          link: "/platforms",
+        },
       ],
     };
   },
 };
 </script>
 <style scoped>
-.navbarTitle-dark {
-  background: -webkit-linear-gradient(rgb(0, 195, 255), rgb(0, 162, 173));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.navbarTitle {
-  background: -webkit-linear-gradient(rgb(158, 255, 171), rgb(111, 162, 238));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.navbarContainer {
+  background-color: rgb(255, 255, 255) !important;
 }
 
-.tabSlider {
-  background: -webkit-linear-gradient(
-    right,
-    rgba(47, 0, 255, 0),
-    rgba(0, 217, 255, 0.5),
-    rgb(0, 255, 242),
-    rgb(0, 217, 255, 0.5),
-    rgba(47, 0, 255, 0)
-  );
+.navbarLogo {
+  padding-top: 15px;
+  height: 90px;
+  cursor: pointer;
 }
-.tabSlider-dark {
-  background: -webkit-linear-gradient(
-    right,
-    rgba(47, 0, 255, 0),
-    rgb(66, 242, 255, 0.5),
-    rgb(120, 255, 214),
-    rgb(66, 242, 255, 0.5),
-    rgba(47, 0, 255, 0)
-  );
+
+.navbarTitle {
+  font-family: 'Poiret One';
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.2vw;
+  color: rgb(115, 139, 173) !important;
+
+}
+
+.navbarTab {
+  min-width: 40px;
+}
+
+.navbarTabText {
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Baloo 2" !important;
+}
+
+.navbarTabSlider {
+  background: -webkit-linear-gradient(right,
+      rgba(47, 0, 255, 0),
+      rgba(0, 217, 255, 0.5),
+      rgb(0, 255, 242),
+      rgb(0, 217, 255, 0.5),
+      rgba(47, 0, 255, 0));
 }
 
 div.v-toolbar__content {
-  padding: 0 !important ;
+  padding: 0 !important;
 }
 
-.navbarText {
-  font-family: "Karla";
-  font-weight: 500;
-  font-size: 14px;
+
+.navbarImage {
+  height: 100px;
+  filter: saturate(55%) blur(0.3px) opacity(0.6);
+  margin-top: -20px;
+  transition: ease-in-out 200ms;
 }
-/* 
-.sideBar{
-  background-image: linear-gradient(to bottom,  transparent,rgb(57, 0, 122))
-} */
-.tab {
-  min-width: 40px;
+
+
+
+
+
+/* Night mode */
+.navbarContainer-dark {
+  background-image: linear-gradient(rgba(0, 132, 255, 0.1), rgb(31, 31, 31));
+  background-color: rgb(31, 31, 31) !important;
 }
-.activeTab {
-  color: rgb(15, 189, 165) !important;
+.navbarTitle-dark {
+  background: -webkit-linear-gradient(rgb(0, 195, 255), rgb(0, 162, 173));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbarImage-dark {
+  height: 100px;
+  margin-top: -20px;
+  transition: ease-in-out 200ms;
+}
+
+.navbarTabSlider-dark {
+  background: -webkit-linear-gradient(right,
+      rgba(47, 0, 255, 0),
+      rgb(66, 242, 255, 0.5),
+      rgb(120, 255, 214),
+      rgb(66, 242, 255, 0.5),
+      rgba(47, 0, 255, 0));
 }
 </style>

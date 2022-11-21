@@ -2,7 +2,7 @@
   <v-overlay
     opacity="1"
     color="rgba(6, 0, 34)"
-    class="myOverlay"
+    class="overlayLayer"
     v-if="this.$store.state.loader.show"
     :value="this.$store.state.loader.show"
   >
@@ -19,7 +19,7 @@
     </v-row>
     <v-row justify="center" class="loadingText">
       <v-col class="text-center">
-        <span class="loadingText"> preparing the content ...</span>
+        <span class="loadingText"> preparing the content ... </span>
       </v-col>
     </v-row>
   </v-overlay>
@@ -28,9 +28,7 @@
 export default {};
 </script>
 <style scoped>
-.color {
-  color: rgb(50, 228, 235);
-}
+
 .loadingText {
   font-size: 14px;
   margin-left: 1px;

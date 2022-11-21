@@ -10,18 +10,16 @@
         <v-spacer></v-spacer>
       </v-row>
       <v-row>
-        <v-col class="footerText text-center">
-          hey, seems like you have reached the end of this page! <br />
-          Thank you for sharing your time
-
-          <br />
-
-          <v-divider class="my-2 mx-16"></v-divider>
-          <v-row class="">
+        <v-col class="text-center footerText">
+          <span class="footerCaption">
+          You have reached the end of this page.<br/>
+          Thank you for sharing your time<br/><br>
+          </span>
+              <v-row class="">
             <v-spacer></v-spacer>
             <v-btn
               icon
-              v-for="(media, i) in $store.state.resources.socialMedias"
+              v-for="(media, i) in $store.state.resources.socialMediasWeb"
               :key="i"
               :href="media.link"
               target="_blank"
@@ -44,24 +42,20 @@
             </v-btn>
             <v-spacer></v-spacer>
           </v-row>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col class="text-center">
+          <br>
           <span class="copyrightText">
-            Art and Design by &copy;2021 Afureru Colors. All Rights Reserved.<br>
+            Illustrations and Designs by Afureru Colors.
+            <!-- &copy;{{ new Date().getFullYear() }} -->
+            <!-- All Rights Reserved. -->
+            <br>
           </span>
-          <span class="credit">
-            Any concepts and references used in fanwork or fanart (including characters,
-            background, etc) still belongs to the original creator.
-          </span>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col class="text-center">
+          Any concepts and references used in fanwork or fanart (including characters,
+          background, etc) still belongs to the original creator.
+          <br><br>
           
         </v-col>
       </v-row>
+ 
     </v-container>
   </v-footer>
 </template>
@@ -76,9 +70,15 @@ export default {
 </script>
 <style scoped>
 .copyrightText {
-  font-size: 10;
-  color: rgb(58, 104, 129);
+    font-size: 13px;
+    color: rgb(58, 104, 129) !important;
 }
+
+.footerCaption {
+  font-size: 14px;
+  color: rgb(58, 104, 129) !important;
+}
+
 .footer-dark {
   background-image: linear-gradient(
     to top,
@@ -87,6 +87,7 @@ export default {
   );
   background-color: rgb(41, 41, 41) !important;
 }
+
 .footer {
   background-image: linear-gradient(
     to top,
@@ -97,10 +98,11 @@ export default {
 }
 
 .footerText {
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(58, 104, 129) !important;
   word-spacing: 1.5px;
 }
+
 .bottomNavbarText {
   font-size: 11px;
   min-width: 0 !important;

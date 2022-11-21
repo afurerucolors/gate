@@ -2,6 +2,7 @@
 node_modules 
 /dist/
 /src/assets/gallery/
+/src/assets/layouts/portfolio/backup/
 
 # local env files
 .env.local

@@ -58,6 +58,8 @@
   font-weight: 700;
   src: url("./Baloo2/Baloo2-Bold.ttf") format('truetype');
 }
+
+
 @font-face {
   font-family: "Baloo 2";
   font-style: normal;
@@ -65,3 +67,9 @@
   src: url("./Baloo2/Baloo2-ExtraBold.ttf") format('truetype');
 }
 
+@font-face {
+  font-family: "Poiret One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./Poiret_One/PoiretOne-Regular.ttf") format('truetype');
+}

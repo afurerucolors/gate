@@ -1,13 +1,16 @@
 module.exports = {
     lintOnSave: false,
+    devServer: {
+        proxy: 'http://localhost:8080'
+    },
     chainWebpack: (config) => {
         config
             .plugin('html')
             .tap(args => {
                 args[0].title = 'Afureru Colors';
                 args[0].meta = {
-                    'description': 'Illustrator/Designer that mainly draw fanworks from anime/game. For job inquiries and commission, you can contact me via the social media provided.',
-                    'keywords': 'anime, illustrator, game, illustration, fanart, commission',
+                    'description': 'Illustrator. I draw anime, game, movie, and original characters.',
+                    'keywords': 'anime, illustrator, art, fanart, commission, artist',
                     'author': 'Afureru Colors',
                     'theme-color': '#E0F7FA',
                 };
@@ -18,5 +21,6 @@ module.exports = {
     transpileDependencies: [
         'vuetify'
     ],
+
 
 }
