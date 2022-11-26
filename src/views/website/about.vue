@@ -1,9 +1,9 @@
 <template>
   <v-container fluid pa-0 class="about pb-12">
-    <div class="filter">
+    <div class="filter c-text-wrapper">
       <div class="pt-12">
         <v-row>
-          <v-container class="theContainer mx-auto pa-0 pb-16">
+          <v-container class="content-wrapper mx-auto pa-0 pb-16">
             <v-row class="" justify="center">
               <v-col cols="10" class="text-center pt-0">
                 <v-container class="pa-0 mb-4">
@@ -20,7 +20,7 @@
                 <v-card-text class="text-center pb-2 c-text-body">
                     Language: English/Indonesian.
                   </v-card-text>
-                <v-container class="c-text-wrapper c-text-container pa-0 ma-0 px-6">
+                <v-container class=" c-text-container pa-0 ma-0 px-6">
                   <v-card-text class="text-center c-text-body">
                     I am an illustrator from Indonesia. I draw illustrations (Original/Fan Work), character design and concept arts. You can find my works on various platforms that I provided below. For request and commission, <router-link to="/request"
                       class="c-link-text">click here</router-link>.
@@ -68,8 +68,9 @@ export default {
 <style scoped>
 @import url("../../assets/css/text-css.css");
 
-.theContainer {
+.content-wrapper {
   min-height: 70vh;
-  max-width: 800px;
+  max-width: 700px;
 }
+
 </style>

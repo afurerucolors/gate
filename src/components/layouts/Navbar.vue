@@ -67,7 +67,15 @@ export default {
 .nav-tab {
   min-width: 40px;
   color: var(--title-secondary-color) !important;
+
 }
+
+.nav-tab:hover {
+  background: rgb(246, 250, 255);
+  transition: 400ms ease-in-out;
+}
+
+
 
 .nav-tab-text {
   font-weight: 500;

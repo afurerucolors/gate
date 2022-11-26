@@ -49,7 +49,7 @@ export default {
 }
 
 .stackItems {
-  transition: transform 600ms ease-in-out;
+  transition: transform 350ms ease-in-out;
   padding: 3px;
   border-radius: 3px;
 }
@@ -64,11 +64,11 @@ export default {
 
 .imageCover {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   bottom: 0px;
-  opacity: 0;
+  opacity: 0px;
   cursor: pointer;
   margin-bottom: 6px;
   z-index: 4000;

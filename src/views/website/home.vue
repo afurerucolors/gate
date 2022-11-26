@@ -56,7 +56,7 @@ export default {
   },
   data() {
     return {
-      offset: 3,
+      offset: 5,
       busy: false,
     };
   },
@@ -65,7 +65,7 @@ export default {
     showMoreWorks() {
       let displayedCount = this.$store.state.resources.displayedArtsCount;
       let maxOffset = (this.worksCount - displayedCount) < this.offset ? displayedCount + (this.worksCount - displayedCount) : displayedCount + this.offset;
-      if (!this.displayIsEmpty) {
+      if (!this.noMoreArts) {
         this.busy = true;
         for (let i = displayedCount; i < maxOffset; i++) {
           this.$store.state.resources.displayedArts.push(this.$store.state.resources.illustrations[i]);
@@ -79,7 +79,7 @@ export default {
     },
   },
   computed: {
-    displayIsEmpty() {
+    noMoreArts() {
       return this.$store.state.resources.displayedArts.length == this.$store.state.resources.illustrations.length;
     },
     worksCount() { return this.$store.state.resources.illustrations.length },
@@ -90,7 +90,7 @@ export default {
     window.scrollTo(0, 0);
     if (this.$store.state.resources.displayedArtsCount == 0) {
       this.showMoreWorks();
-
+      this.offset = 3;
     }
 
   },

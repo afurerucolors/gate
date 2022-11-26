@@ -35,6 +35,7 @@ export default {
             platformsrc: "pixiv-blue",
             background: "blue lighten-5",
             text: "blue--text text--darken-2",
+            quicklink: true,
         },
         {
             name: "Twitter",
@@ -43,6 +44,7 @@ export default {
             icon: "mdi-twitter",
             background: "blue lighten-4",
             text: "blue--text text--darken-3",
+            quicklink: true,
         },
         {
             name: "Instagram",
@@ -51,6 +53,7 @@ export default {
             icon: "mdi-instagram",
             background: "red lighten-5",
             text: "purple--text text--darken-4",
+            quicklink: true,
         },
         {
             name: "Facebook",
@@ -67,6 +70,7 @@ export default {
             icon: "mdi-deviantart",
             background: "grey lighten-2",
             text: "green--text text--darken-4",
+            quicklink: true,
         },
         {
             name: "Artstation",
@@ -75,13 +79,14 @@ export default {
             icon: "mdi-artstation",
             background: "indigo lighten-4",
             text: "indigo--text text--darken-4",
+            quicklink: true,
         },
        
         {
             name: "Sketchmob",
             account: "Afureru Colors",
             link: "https://sketchmob.com/user-profile/afurerucolors",
-            icon: 'mdi-pen',
+            icon: 'mdi-lead-pencil',
             // hide: true,
             // disabled: true,
             // background: "amber lighten-5",

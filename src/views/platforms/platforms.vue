@@ -3,7 +3,7 @@
     <div class="filter" style="margin: 0 auto">
       <div class="pt-12">
         <v-row>
-          <v-container class="theContainer mx-auto pa-0 pb-16">
+          <v-container class="content-wrapper mx-auto pa-0 pb-16">
             <v-row class="" justify="center">
               <v-col cols="10" class="text-center pt-0">
                 <v-container class="pa-0 mb-6">
@@ -20,7 +20,7 @@
                   </v-card-text>
                 </v-container>
                 <v-container>
-                  <v-row justify="center">
+                  <v-row justify="center" class="c-text-wrapper">
                     <v-col cols="12" sm="6" md="4" class=" c-text-body" v-for="sm in $store.state.platforms.socialMedias"
                       :key="sm.name">
                       <!-- <v-tooltip left color="rgba(245, 245, 245, 1)">
@@ -86,7 +86,7 @@ export default {
 <style scoped>
 @import url("../../assets/css/text-css.css");
 
-.theContainer {
+.content-wrapper {
   min-height: 70vh;
   max-width: 800px;
 }

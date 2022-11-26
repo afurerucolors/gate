@@ -1,11 +1,11 @@
 <template>
   <v-container fluid pa-0 class="faq pb-12">
-    <div class="filter">
+    <div class="c-text-wrapper filter">
       <div class="pt-12">
         <v-row justify="center">
-          <v-container class="theContainer mx-auto pa-0 pb-16">
+          <v-container class="content-wrapper mx-auto pa-0 pb-16">
             <v-row justify="center" class="c-text-title"> FAQ </v-row>
-            <v-row class="" justify="center">
+            <v-row class=" c-faq-container" justify="center">
               <v-col>
                 <v-list rounded>
 
@@ -13,7 +13,7 @@
                     <template v-slot:activator>
                       <v-list-item-content>
                         <v-list-item-title >
-                          Could I use your art as profile picture/background?
+                          Could I use your art as profile/cover picture?
                         </v-list-item-title>
                       </v-list-item-content>
                     </template>
@@ -80,18 +80,20 @@
 
                 </v-list>
               </v-col>
+              <v-col>
+                <contacts></contacts>
+              </v-col>
             </v-row>
 
-            <contacts></contacts>
           </v-container>
         </v-row>
       </div>
     </div>
   </v-container>
 </template>
+
 <script>
 import Contacts from '../../components/layouts/contacts.vue';
-
 export default {
   components: {
     Contacts,
@@ -127,13 +129,17 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 @import url("../../assets/css/text-css.css");
 
-.theContainer {
+.content-wrapper {
   min-height: 70vh;
   max-width: 500px;
 }
 
-.faq {}
+.c-faq-container {
+  padding: 20px;
+}
+
 </style>

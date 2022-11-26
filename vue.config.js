@@ -9,8 +9,8 @@ module.exports = {
             .tap(args => {
                 args[0].title = 'Afureru Colors';
                 args[0].meta = {
-                    'description': 'Illustrator. I draw anime, game, movie, and original characters.',
-                    'keywords': 'anime, illustrator, art, fanart, commission, artist',
+                    'description': 'Digital Illustrator. I do anime, game, movie fan arts and original characters.',
+                    'keywords': 'Anime, Fan Art, Commission, Artist, Original Character',
                     'author': 'Afureru Colors',
                     'theme-color': '#E0F7FA',
                 };

@@ -13,46 +13,20 @@
         </v-main>
       </section>
       <footer>
-          <Footer></Footer>
+        <Footer></Footer>
       </footer>
     </div>
-    <LightBox
-      :show="this.$store.state.illustrations.lightbox.show"
-      :items="this.$store.state.resources.displayedArts"
-    ></LightBox>
+    <LightBox :show="this.$store.state.illustrations.lightbox.show" :items="this.$store.state.resources.displayedArts">
+    </LightBox>
     <div class="sideNavigationPanel">
-      <v-tooltip
-        left
-        color="rgba(0,0,0,0.5)"
-        v-for="(media, i) in $store.state.resources.socialMedias"
-        :key="i"
-      >
+      <v-tooltip left color="rgba(0,0,0,0.5)" v-for="(media, i) in $store.state.platforms.socialMedias" :key="i">
         <template v-slot:activator="{ on, attrs }">
-          <div v-if="!media.hide">
-            <v-btn
-              icon
-              dark
-              v-bind="attrs"
-              v-on="on"
-              :href="media.link"
-              target="_blank"
-              class="mb-1"
-            >
+          <div v-if="!media.hide && !media.website">
+            <v-btn icon dark v-bind="attrs" v-on="on" :href="media.link" target="_blank" class="mb-1">
               <v-avatar class="btnTopAvatar" size="25">
-                <v-icon
-                  size="20"
-                  v-if="media.icon"
-                  v-text="media.icon"
-                  color="blue-grey lighten-2"
-                ></v-icon>
-                <v-img
-                  width="19"
-                  height="19"
-                  class="contactIcon iconImage mx-1"
-                  :src="require('@/assets/icons/' + media.src + '.png')"
-                  v-else
-                  contain
-                />
+                <v-icon size="20" v-if="media.icon" v-text="media.icon" color="blue-grey lighten-2"></v-icon>
+                <v-img width="19" height="19" class="contactIcon iconImage mx-1"
+                  :src="require('@/assets/icons/' + media.src + '.png')" v-else contain />
               </v-avatar>
             </v-btn>
           </div>
@@ -100,5 +74,11 @@ export default {
   transform: translate(0, -50%);
   z-index: 20;
   margin-right: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .sideNavigationPanel {
+    scale: 0.8;
+  }
 }
 </style>

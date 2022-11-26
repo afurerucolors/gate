@@ -3,7 +3,7 @@
     <div class="filter">
       <div class="pt-12">
         <v-row>
-          <v-container class="theContainer mx-auto pa-0 pb-16">
+          <v-container class="content-wrapper mx-auto pa-0 pb-16">
             <v-row class="" justify="center">
               <v-col cols="10" class="text-center pt-0">
                 <v-container class="pa-0 mb-6">
@@ -84,7 +84,7 @@ export default {
 <style scoped>
 @import url("../../assets/css/text-css.css");
 
-.theContainer {
+.content-wrapper {
   min-height: 70vh;
   max-width: 800px;
 }
