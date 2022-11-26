@@ -1,25 +1,25 @@
 <template>
   <nav>
-    <v-app-bar app flat absolute fade-img-on-scroll light fixed class="navbarContainer ma-0" height="150">
+    <v-app-bar app flat absolute fade-img-on-scroll light fixed class="nav-container ma-0" height="150">
       <v-row class="text-center py-8 pb-16" justify="center" style="backdrop-filter: blur(0px)">
         <v-col cols="12" class="py-0">
-          <img src="@/assets/images/layouts/logo.png" alt="" class="navbarLogo" @click="$router.replace('/')" />
+          <img src="@/assets/images/layouts/logo.png" alt="" class="c-main-logo-img" @click="$router.replace('/')" />
         </v-col>
         <v-col cols="12" align-self="center" class="navbarCol2 pa-0">
-          <span class="navbarTitle">Afureru Colors</span>
+          <span class="c-main-title-text">Afureru Colors</span>
         </v-col>
       </v-row>
 
       <template v-slot:img="{ props }">
-        <v-img v-bind="props" src="@/assets/images/layouts/navbar-backdrop.png" class="navbarImage"></v-img>
+        <v-img v-bind="props" src="@/assets/images/layouts/navbar-backdrop.png" class="c-nav-background"></v-img>
       </template>
 
       <template v-slot:extension>
         <v-tabs centered class="mb-8">
-          <v-tabs-slider class="navbarTabSlider"></v-tabs-slider>
-          <v-tab class="navbarTab" v-for="navbarTab in navbarTabs" active-class="activeTab" :key="navbarTab.title" :href="navbarTab.link"
-            :to="navbarTab.link">
-            <span class="navbarTabText">{{ navbarTab.title }}</span>
+          <v-tabs-slider class="nav-tab-slider"></v-tabs-slider>
+          <v-tab class="nav-tab" v-for="navbarTab in navbarTabs" active-class="active-tab" :key="navbarTab.title"
+            :href="navbarTab.link" :to="navbarTab.link">
+            <span class="nav-tab-text">{{ navbarTab.title }}</span>
           </v-tab>
         </v-tabs>
       </template>
@@ -58,50 +58,28 @@ export default {
 };
 </script>
 <style scoped>
-.navbarContainer {
+
+
+.nav-container {
   background-color: rgb(255, 255, 255) !important;
 }
 
-.navbarLogo {
-  padding-top: 15px;
-  height: 90px;
-  cursor: pointer;
-}
-
-.navbarTitle {
-  font-family: 'Poiret One';
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 0.2vw;
-  color: rgb(115, 139, 173) !important;
-
-}
-
-.navbarTab {
+.nav-tab {
   min-width: 40px;
+  color: var(--title-secondary-color) !important;
 }
 
-.navbarTabText {
+.nav-tab-text {
   font-weight: 500;
   font-size: 13px;
   font-family: "Baloo 2" !important;
 }
 
-.navbarTabSlider {
-  background: -webkit-linear-gradient(right,
-      rgba(47, 0, 255, 0),
-      rgba(0, 217, 255, 0.5),
-      rgb(0, 255, 242),
-      rgb(0, 217, 255, 0.5),
-      rgba(47, 0, 255, 0));
+.nav-tab-slider {
+  background: var(--webkit-horizontal-gradient-color);
 }
 
-div.v-toolbar__content {
-  padding: 0 !important;
-}
-
-
-.navbarImage {
+.c-nav-background {
   height: 100px;
   filter: saturate(55%) blur(0.3px) opacity(0.6);
   margin-top: -20px;
@@ -112,25 +90,13 @@ div.v-toolbar__content {
 
 
 
-/* Night mode */
-.navbarContainer-dark {
+/* Dark Mode */
+.nav-container.dark {
   background-image: linear-gradient(rgba(0, 132, 255, 0.1), rgb(31, 31, 31));
   background-color: rgb(31, 31, 31) !important;
 }
-.navbarTitle-dark {
-  background: -webkit-linear-gradient(rgb(0, 195, 255), rgb(0, 162, 173));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-.navbarImage-dark {
-  height: 100px;
-  margin-top: -20px;
-  transition: ease-in-out 200ms;
-}
-
-.navbarTabSlider-dark {
+.nav-tab-slider.dark {
   background: -webkit-linear-gradient(right,
       rgba(47, 0, 255, 0),
       rgb(66, 242, 255, 0.5),
@@ -138,4 +104,18 @@ div.v-toolbar__content {
       rgb(66, 242, 255, 0.5),
       rgba(47, 0, 255, 0));
 }
+
+
+
+/* Overrides */
+
+div.v-toolbar__content {
+  padding: 0 !important;
+}
+
+.active-tab {
+  color: var(--title-primary-color) !important;
+}
+
+/* End of overrides */
 </style>

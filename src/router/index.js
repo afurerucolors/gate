@@ -12,7 +12,6 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: 'Home',
         component: MainLayout,
         redirect: Home,
         // redirect: Platforms,

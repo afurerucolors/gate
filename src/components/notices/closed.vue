@@ -2,7 +2,7 @@
     <v-card-text class="
                       text-center
                       pb-0
-                      textBody
+                      c-text-body
                       red--text
                       text-subtitle-2 text--lighten-2
                     ">

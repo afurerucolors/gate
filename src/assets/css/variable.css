@@ -1,0 +1,14 @@
+:root {
+    --logo-primary-color: rgb(115, 139, 173);
+    --title-primary-color: rgb(82, 149, 194);
+    --title-secondary-color: rgb(166, 171, 179);
+    --body-primary-color: rgb(69, 73, 75);
+
+    --link-active-color: var(--title-primary-color);
+    --link-hover-color: rgb(187, 149, 77);
+
+    --gradient-color: linear-gradient(rgba(47, 0, 255, 0), rgba(199, 218, 236, 0.2), rgb(199, 218, 236, 1), rgb(199, 218, 236, 0.2), rgba(47, 0, 255, 0));
+    --webkit-gradient-color: -webkit-linear-gradient(rgba(47, 0, 255, 0), rgba(199, 218, 236, 0.2), rgba(199, 218, 236, 1), rgb(199, 218, 236, 0.2), rgba(47, 0, 255, 0));
+    --horizontal-gradient-color: linear-gradient(right, rgba(47, 0, 255, 0), rgba(199, 218, 236, 0.2), rgba(199, 218, 236, 1), rgb(199, 218, 236, 0.2), rgba(47, 0, 255, 0));
+    --webkit-horizontal-gradient-color: -webkit-linear-gradient(right, rgba(47, 0, 255, 0), rgba(199, 218, 236, 0.2), rgba(199, 218, 236, 1), rgb(199, 218, 236, 0.2), rgba(47, 0, 255, 0));
+}

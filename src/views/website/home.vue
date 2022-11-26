@@ -16,11 +16,11 @@
 
     <v-row justify="center" class="mt-4">
       <v-col cols="8">
-        <div class="contentDivider"></div>
+        <div class="c-content-divider"></div>
       </v-col>
       <v-col cols="8">
         <v-container class="pa-0">
-          <v-card-text class="textBody text-center">
+          <v-card-text class="c-text-body text-center">
             Job request or commission? <br />
           </v-card-text>
           <v-card-actions class="py-0">
@@ -35,11 +35,11 @@
       <v-col cols="8"> </v-col>
       <v-col cols="8" class="mb-6">
         <v-container class="pa-0">
-          <v-card-text class="textBody text-center">
+          <v-card-text class="c-text-body text-center">
             I display only some of my artworks here.
             <br />
             if you want to look at the others, you can find them
-            <a href="/about/#contact" class="routerLink">here</a>
+            <a href="/about/#contact" class="c-link-text">here</a>
           </v-card-text>
 
         </v-container>

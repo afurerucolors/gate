@@ -2,125 +2,93 @@
     from {
         opacity: 0%;
     }
+
     to {
         opacity: 100%;
     }
 }
 
-.title-font {
-    font-family: 'Poiret One' !important;
-    letter-spacing: 2px;
-    font-size: 12px !important;
-    font-weight: bold !important;
-    color: rgb(102, 128, 163) !important;
+.c-main-logo-img {
+    padding-top: 15px;
+    height: 90px;
+    cursor: pointer;
 }
 
-
-.about-title {
-    font-family: 'Poiret One' !important;
-    font-size: 12px;
+.c-main-title-text {
+    font-family: 'Poiret One';
     font-weight: bold;
-    color: rgb(102, 128, 163) !important;
-    /* color: rgb(58, 104, 129) !important; */
-    letter-spacing: 2px !important;
+    font-size: 20px;
+    letter-spacing: 0.2vw;
+    color: var(--logo-primary-color) !important;
 }
 
-.credit {
-    font-size: 12px;
-    font-family: 'Baloo 2';
-    /* color: rgb(58, 104, 129) !important; */
-    color: rgb(102, 128, 163) !important;
-    letter-spacing: 0.7px;
-}
-
-.routerLink {
+.c-link-text {
     text-decoration: none;
-    color: rgb(62, 92, 131) !important;
+    color: var(--link-active-color) !important;
     font-weight: bold;
 }
-.routerLink:hover {
+
+.c-link-text:hover {
     text-decoration: none;
-    color: rgb(192, 127, 73) !important;
+    color: var(--link-hover-color) !important;
     font-weight: bold;
     transition-duration: 300ms;
 
 }
 
-.textWrapper {
-    animation: slidein ease-in-out 2000ms;
+.c-text-wrapper {
+    animation: slidein ease-in-out 1200ms;
     border-radius: 10px;
 }
 
-.portalLinkContainer {
-    
-}
-
-.textContainer {
+.c-text-container {
     border-radius: 20px;
     border-style: solid;
-    border-image: -webkit-linear-gradient( rgba(47, 0, 255, 0), rgb(66, 242, 255, 0.2), rgb(120, 255, 214, 0.3), rgb(66, 242, 255, 0.2), rgba(47, 0, 255, 0));
+    border-image: var(--webkit-gradient-color);
     border-image-slice: 1;
     width: 100;
     backdrop-filter: blur(5px);
-}
-
-.textBody {
-    font-size: 14px;
-    color: rgb(58, 104, 129) !important;
-    word-spacing: 1.5px;
-}
-.textBodyPortalLink {
-    max-width: 600px;
-}
-
-.textTitle {
-    font-size: 14px;
-    font-weight: 600;
-    /* color: rgb(58, 104, 129) !important; */
-    color: rgb(102, 128, 163) !important;
-
-    letter-spacing: 0.4px;
-}
-
-.textSubtitle {
-    font-size: 12px;
-    font-weight: 600;
-    color: rgb(58, 104, 129) !important;
-    letter-spacing: 0.4px;
-}
-
-.textContainer {
     max-width: 800px;
 }
 
-.gradient {
-    background-image: linear-gradient( rgb(31, 31, 31), rgba(31, 31, 31, 0), rgba(31, 31, 31));
-}
-
-.contactText-dark {
-    color: rgb(207, 214, 218) !important;
-    font-family: "Karla";
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-}
-
-.contactText {
-    color: rgb(147, 171, 184)!important;
-    font-family: "Karla";
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-}
-
-.contactAccount {
-    color: rgb(137, 204, 190) !important;
-    font-family: "Karla";
+.c-text-body {
     font-size: 14px;
+    color: var(--body-primary-color) !important;
+    word-spacing: 1.5px;
 }
 
-.contactAccount-dark {
-    color: rgb(137, 204, 190) !important;
-    font-family: "Karla";
+.c-text-display {
+    font-family: 'Poiret One';
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--title-primary-color) !important;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+.c-text-title {
     font-size: 14px;
+    font-weight: 600;
+    font-family: "Poiret One";
+    /* color: rgb(58, 104, 129) !important; */
+    color: var(--title-primary-color) !important;
+    letter-spacing: 2px;
+}
+
+.c-text-subtitle {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Poiret One";
+    color: var(--title-secondary-color)  !important;
+    letter-spacing: 2px;
+
+}
+
+
+/* Dark Mode */
+.c-main-title-text.dark {
+    background: -webkit-linear-gradient(rgb(0, 195, 255), rgb(0, 162, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

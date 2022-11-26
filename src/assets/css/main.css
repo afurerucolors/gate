@@ -1,22 +1,23 @@
 @import url('../fonts/fonts.css');
-@import url('./m-preview.css');
+@import url('./variable.css');
 @import url('./text-css.css');
+
 ::-webkit-scrollbar {
     width: 3px;
 }
 
 ::-webkit-scrollbar-track {
-    background: hsl(204, 98%, 64%);
+    background: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-image: -webkit-linear-gradient( rgba(47, 0, 255, 0), rgba(184, 255, 234, 0.9), rgba(47, 0, 255, 0));
+    background-image: -webkit-linear-gradient( rgba(47, 0, 255, 0), rgb(135, 178, 235), rgba(47, 0, 255, 0));
 }
 
+/* Overrides */
 .v-application {
     font-family: 'Karla';
     font-weight: 500;
-    color: aliceblue !important;
 }
 
 .thanks {
@@ -28,17 +29,17 @@
 
 
 
-.contentDivider {
+.c-content-divider {
     width: 100%;
     padding-top: 1px;
-    background-image: -webkit-linear-gradient(right, rgba(47, 0, 255, 0), rgb(66, 242, 255, 0.5), rgb(120, 255, 214, 0.6), rgb(66, 242, 255, 0.5), rgba(47, 0, 255, 0));
+    background-image: var(--webkit-horizontal-gradient-color);
 }
 
-.contentDividerVertical {
+.c-content-divider-vertical {
     max-height: 100%;
     padding-left: 1px;
     display: inline;
-    background-image: -webkit-linear-gradient(rgba(47, 0, 255, 0), rgb(66, 242, 255, 0.5), rgb(120, 255, 214, 0.6), rgb(66, 242, 255, 0.5), rgba(47, 0, 255, 0));
+    background-image: var(--webkit-gradient-color);
 }
 
 .footerText {

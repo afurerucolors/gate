@@ -2,7 +2,7 @@
   <v-container fluid class="pa-0">
     <v-row>
       <v-col v-for="(commission,i) in commissions" :key="i" cols="12" md="6">
-          <PriceDetail :title="commission.title" :desc="commission.desc" :upgrades="commission.upgrades" :defprice="commission.defprice" :global="isGlobal"></PriceDetail>
+          <PriceDetail :color="commission.color" :title="commission.title" :desc="commission.desc" :upgrades="commission.upgrades" :defprice="commission.defprice" :global="isGlobal"></PriceDetail>
       </v-col>
     </v-row>
     <!-- <v-row>
