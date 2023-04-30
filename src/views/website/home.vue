@@ -20,13 +20,10 @@
       </v-col>
       <v-col cols="8">
         <v-container class="pa-0">
-          <v-card-text class="c-text-body text-center">
-            Job request or commission? <br />
-          </v-card-text>
           <v-card-actions class="py-0">
             <v-spacer></v-spacer>
             <v-btn depressed dark color="blue-grey lighten-2" to="/request">
-              click me
+              Request or Commission
             </v-btn>
             <v-spacer></v-spacer>
           </v-card-actions>
@@ -56,7 +53,7 @@ export default {
   },
   data() {
     return {
-      offset: 5,
+      offset: 3,
       busy: false,
     };
   },
@@ -69,7 +66,7 @@ export default {
         this.busy = true;
         for (let i = displayedCount; i < maxOffset; i++) {
           this.$store.state.resources.displayedArts.push(this.$store.state.resources.illustrations[i]);
-          setTimeout(1000);
+          setTimeout(3000);
         }
         this.busy = false;
         this.$store.state.resources.displayedArtsCount += maxOffset - displayedCount;
@@ -90,7 +87,6 @@ export default {
     window.scrollTo(0, 0);
     if (this.$store.state.resources.displayedArtsCount == 0) {
       this.showMoreWorks();
-      this.offset = 3;
     }
 
   },

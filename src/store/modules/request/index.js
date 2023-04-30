@@ -9,7 +9,8 @@ export default {
                 upgrades: [
                     {desc: '+ Character', price: '35'},
                     {desc: 'Background', price: '30'},
-                    {desc: 'Pet/Companion', price: '5'},
+                    {desc: 'Pet', price: '5'},
+                    {desc: 'Companion', price: '20'},
 
                 ],
                 color: 'rgb(202, 222, 238)',
@@ -19,9 +20,10 @@ export default {
                 desc: '',
                 defprice: '70',
                 upgrades: [
-                    {desc: '+ Character', price: '65'},
-                    {desc: 'Background', price: '40'},
-                    {desc: 'Pet/Companion', price: '5'},
+                    {desc: '+ Character', price: '60'},
+                    {desc: 'Background', price: '30'},
+                    {desc: 'Pet', price: '5'},
+                    {desc: 'Mascot', price: '20'},
 
                 ],
                 color: 'rgb(238, 235, 202)',

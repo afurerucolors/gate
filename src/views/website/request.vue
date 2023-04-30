@@ -12,14 +12,14 @@
               </v-card-text>
 
               <v-card-text class="text-justify c-text-body">
-                I accept commission or job request for drawing illustration of original, anime, or movie characters.
-                Commission service is available through <a href="https://www.fiverr.com/afurerucolors" target="_blank"
-                  class="c-link-text">Fiverr</a> and <a href="https://sketchmob.com/user-profile/afurerucolors"
-                  target="_blank" class="c-link-text">Sketchmob</a>, or using direct payment through Paypal.
+                I accept commission or job request for drawing illustration of original, anime, or movie characters. 
                 <br><br>
-                If these provided options don't match your request, you can message me your request through my social
+                This page provide more detailed information regarding basic commission, if this don't match your requirement, you can message me your request through my social
                 media or e-mail.
                 <br><br>
+                My Commission service is available through <a href="https://www.fiverr.com/afurerucolors" target="_blank"
+                  class="c-link-text">Fiverr</a> and <a href="https://sketchmob.com/user-profile/afurerucolors"
+                  target="_blank" class="c-link-text">Sketchmob</a>, or using direct payment through Paypal.
                 Basic commission currently divided into half body composition (limited to around knee level) and full
                 body
                 composition.
@@ -34,7 +34,9 @@
                   comes with or without simple background, you could also request for detailed background
                   such as scene with extra charge.
                   <br><br>
-                  If you have any questions, you could ask your questions through my social media or e-mail.
+                  Pet cover more simple pet that can be find in daily life, while companion could be a mascot or more detailed creature than your usual pet.
+                  <br><br>
+                  If you have more questions, you could ask your questions through my social media or e-mail.
                   <br><br>
                 </div>
                 <div class="text-justify">
