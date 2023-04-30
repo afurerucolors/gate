@@ -23,7 +23,7 @@ export default {
                     {desc: '+ Character', price: '60'},
                     {desc: 'Background', price: '30'},
                     {desc: 'Pet', price: '5'},
-                    {desc: 'Mascot', price: '20'},
+                    {desc: 'Companion', price: '20'},
 
                 ],
                 color: 'rgb(238, 235, 202)',
