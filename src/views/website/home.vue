@@ -65,7 +65,7 @@ export default {
       if (!this.noMoreArts) {
         this.busy = true;
         for (let i = displayedCount; i < maxOffset; i++) {
-          this.$store.state.resources.displayedArts.push(this.$store.state.resources.illustrations[i]);
+          this.$store.state.resources.displayedArts.push(this.$store.state.illustrations.illustrations[i]);
           setTimeout(3000);
         }
         this.busy = false;
@@ -77,9 +77,9 @@ export default {
   },
   computed: {
     noMoreArts() {
-      return this.$store.state.resources.displayedArts.length == this.$store.state.resources.illustrations.length;
+      return this.$store.state.resources.displayedArts.length == this.$store.state.illustrations.illustrations.length;
     },
-    worksCount() { return this.$store.state.resources.illustrations.length },
+    worksCount() { return this.$store.state.illustrations.illustrations.length },
     isBusy() { return this.busy }
   },
   watch: {},

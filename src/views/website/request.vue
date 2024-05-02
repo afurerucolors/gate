@@ -12,9 +12,10 @@
               </v-card-text>
 
               <v-card-text class="text-justify c-text-body">
-                I accept commission or job request for drawing illustration of original, anime, or movie characters. 
+                I accept commission or job request for drawing illustration of original, anime, or movie characters. You could find most of my commission/request work <a href="https://www.deviantart.com/afurerucolors/gallery/75140920/commissions"
+                  target="_blank" class="c-link-text"> <u>here</u> </a>
                 <br><br>
-                This page provide more detailed information regarding basic commission, if this don't match your requirement, you can message me your request through my social
+                This page provide more detailed information regarding basic commission, if you still have unanswered questions, Please message me your inquiries through my social
                 media or e-mail.
                 <br><br>
                 My Commission service is available through <a href="https://www.fiverr.com/afurerucolors" target="_blank"

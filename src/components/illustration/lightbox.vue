@@ -1,39 +1,31 @@
 <template>
-<section id="light-box">
-  <v-overlay class="overlayLayer" opacity="0.7" v-if="show" color="blue-grey lighten-5">
-    <v-row justify="end" class="m-lightbox-options ma-0">
-      <v-col cols="" align-self="center">
-        {{ items[$store.state.illustrations.lightbox.index].title }}
-      </v-col>
-      <v-col cols="auto" class="text-end">
-        <v-btn @click="closeLightboxPreview()" small text class="text-h6" color="blue-grey">x</v-btn>
-      </v-col>
-    </v-row>
-    <v-container fluid class="lightbox">
-      <v-row>
-        <v-carousel
-          hide-delimiters
-          show-arrows-on-hover
-          v-model="index"
-          height="auto"
-          class="toCenter"
-        >
-          <v-carousel-item v-for="(item, i) in items" :key="i">
-            <v-container>
-              <v-img
-                :src="item.link ? item.link : require('@/assets/images/illustrations/' + item.src)
-                "
-                max-height="500"
-                :max-width="$vuetify.breakpoint.width - 10"
-                contain
-              ></v-img>
-            </v-container>
-          </v-carousel-item>
-        </v-carousel>
-      </v-row>
-    </v-container>
-  </v-overlay>
-</section>
+  <section id="light-box">
+    <v-overlay class="overlayLayer" opacity="0.7" v-if="show" color="blue-grey lighten-5">
+      <v-container fluid class="lightbox">
+        <v-row justify="end" class="m-lightbox-options ma-0">
+                <v-col cols="" align-self="center">
+                  {{ title }}
+                </v-col>
+                <v-col cols="auto" class="text-end">
+                  <v-btn @click="closeLightboxPreview()" small text class="text-h6" color="blue-grey">x</v-btn>
+                </v-col>
+              </v-row>
+        <v-row>
+          <v-carousel hide-delimiters show-arrows-on-hover v-model="index" @change="updateTitle($event)" height="auto"
+            class="toCenter">
+            <v-carousel-item v-for="(item, i) in items" :key="i" mount>
+            
+              <v-container>
+                <v-img :src="item.link ? item.link : require('@/assets/images/illustrations/' + item.src)
+                  " max-height="500" :max-width="$vuetify.breakpoint.width - 10" contain></v-img>
+              </v-container>
+            </v-carousel-item>
+
+          </v-carousel>
+        </v-row>
+      </v-container>
+    </v-overlay>
+  </section>
 </template>
 <script>
 export default {
@@ -43,17 +35,23 @@ export default {
   },
   methods: {
     closeLightboxPreview() {
-      this.$store.commit("resources/closeLightboxPreview");
+      this.$store.commit("illustrations/closeLightboxPreview");
     },
+    updateTitle(i) {
+      this.$store.commit("illustrations/openLightboxPreview",i)
+    }
   },
   computed: {
+    title() {
+      return this.$store.state.illustrations.lightbox.title;
+    }
+    ,
     index: {
       get() {
         return this.$store.state.illustrations.lightbox.index;
       },
       set(val) {
         return this.$store.state.resources.lightbox.index = val;
-       
       },
     },
   },
@@ -64,6 +62,7 @@ export default {
   animation: animation ease-in-out 400ms;
   z-index: 30 !important;
 }
+
 .lightbox {
   position: fixed;
   top: 50%;
@@ -75,14 +74,17 @@ export default {
 
   height: 100vh;
 }
+
 @keyframes animation {
   0% {
     opacity: 0%;
   }
+
   100% {
     opacity: 100%;
   }
 }
+
 .x {
   color: rgba(5, 0, 32, 0.4);
 }
@@ -96,10 +98,11 @@ export default {
   width: 100%;
   text-indent: 20px;
   color: rgb(58, 104, 129);
-z-index: 31;
+  z-index: 31;
   letter-spacing: 1px;
   background-color: rgba(255, 255, 255, 0.7);
 }
+
 .m-lightbox-options-dark {
   font-family: "Karla";
   top: 0;

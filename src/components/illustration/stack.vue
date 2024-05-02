@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="displayContainer pa-0 mt-2 px-8">
     <v-container class="stackContainer mt-4 pt-0">
-      <v-lazy>
+      <!-- <v-lazy> -->
         <stack :column-min-width="270" :gutter-width="8" :gutter-height="8" monitor-images-loaded class="stack">
           <stack-item v-for="(image, i) in images" :key="i" class="stackItems">
             <v-container class="pa-0 pb-0 imageContainer"
@@ -12,7 +12,7 @@
             </v-container>
           </stack-item>
         </stack>
-      </v-lazy>
+      <!-- </v-lazy> -->
 
       <!-- <v-container class="noImage text-center" v-if="images.length == 0">
         <v-progress-circular color="rgb(50, 228, 235)" class="myLoader" indeterminate size="40" style="">

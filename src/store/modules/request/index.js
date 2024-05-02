@@ -9,7 +9,6 @@ export default {
                 upgrades: [
                     {desc: '+ Character', price: '35'},
                     {desc: 'Background', price: '30'},
-                    {desc: 'Pet', price: '5'},
                     {desc: 'Companion', price: '20'},
 
                 ],
@@ -22,7 +21,6 @@ export default {
                 upgrades: [
                     {desc: '+ Character', price: '60'},
                     {desc: 'Background', price: '30'},
-                    {desc: 'Pet', price: '5'},
                     {desc: 'Companion', price: '20'},
 
                 ],
