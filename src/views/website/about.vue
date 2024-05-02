@@ -22,7 +22,7 @@
                   </v-card-text>
                 <v-container class=" c-text-container pa-0 ma-0 px-6">
                   <v-card-text class="text-center c-text-body">
-                    I am an illustrator from Indonesia. I draw illustrations (Original/Fan Work), character design and concept arts. You can find my works on various platforms that I provided below. For request and commission, <router-link to="/request"
+                    I draw illustrations (Original/Fan Work), character design and concept arts. You can find my works on various platforms that I provided below. For request and commission, <router-link to="/request"
                       class="c-link-text">click here</router-link>.
                   </v-card-text>
                   <v-card-text class="mt-8 text-center c-text-body" id="contact">
@@ -30,7 +30,7 @@
                   </v-card-text>
                   <v-card-actions class="py-0">
                     <v-spacer></v-spacer>
-                    <v-btn icon v-for="(media, i) in $store.state.resources.socialMedias" :key="i" :href="media.link"
+                    <v-btn icon v-for="(media, i) in $store.state.resources.platforms" :key="i" :href="media.link"
                       target="_blank">
                       <v-icon size="20px" class="contactIcon mx-1" v-text="media.icon" v-if="media.icon"
                         color="blue-grey lighten-2"></v-icon>

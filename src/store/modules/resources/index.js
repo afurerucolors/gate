@@ -7,7 +7,6 @@ export default {
         displayedArtsCount: 0,
         displayedArts: [],
         illustrations: [
-            
         ],
         lightbox: {
             show: false,
@@ -42,7 +41,8 @@ export default {
             //     icon: "mdi-whatsapp",
             // },
         ],
-        socialMedias: [{
+        socialMedias: [
+            {
                 name: "Pixiv",
                 account: "Afureru Colors",
                 link: "https://www.pixiv.net/users/35822162",
@@ -112,9 +112,51 @@ export default {
                 // text: "green--text text--lighten-3",
                 background: "green lighten-4",
                 text: "green--text text--darken-4",
-            },
-        
+            },        
         ],
+        platforms: [
+            {
+                name: "Pixiv",
+                account: "Afureru Colors",
+                link: "https://www.pixiv.net/users/35822162",
+                icon: null,
+                src: "pixiv",
+                background: "blue lighten-5",
+                text: "blue--text text--darken-2",
+            },
+            {
+                name: "Twitter",
+                account: "@AfureruColors",
+                link: "https://www.twitter.com/afurerucolors",
+                icon: "mdi-twitter",
+                background: "blue lighten-4",
+                text: "blue--text text--darken-3",
+            },
+            {
+                name: "Instagram",
+                account: "@afurerucolors",
+                link: "https://www.instagram.com/afurerucolors",
+                icon: "mdi-instagram",
+                background: "red lighten-5",
+                text: "purple--text text--darken-4",
+            },
+            {
+                name: "Facebook",
+                account: "Afureru Colors",
+                link: "https://www.facebook.com/afurerucolors",
+                icon: "mdi-facebook",
+                background: "blue-grey lighten-5",
+                text: "blue--text text--darken-4",
+            },
+            {
+                name: "DeviantArt",
+                account: "AfureruColors",
+                link: "https://www.deviantart.com/afurerucolors",
+                icon: "mdi-deviantart",
+                background: "grey lighten-2",
+                text: "green--text text--darken-4",
+            },
+        ]
     },
     mutations: {
         setLightbox(state, { index, type }) {
