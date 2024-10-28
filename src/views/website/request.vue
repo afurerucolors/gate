@@ -12,7 +12,7 @@
               </v-card-text>
 
               <v-card-text class="text-justify c-text-body">
-                I accept commission or job request for drawing illustration of original, anime, or movie characters. You could find most of my commission/request work <a href="https://www.deviantart.com/afurerucolors/gallery/75140920/commissions"
+                I accept commission or job request for drawing illustration of original, anime, or movie characters. You could find most of my commission/request work <a href="https://cara.app/afurerucolors/portfolio/commissions"
                   target="_blank" class="c-link-text"> <u>here</u> </a>
                 <br><br>
                 This page provide more detailed information regarding basic commission, if you still have unanswered questions, Please message me your inquiries through my social
