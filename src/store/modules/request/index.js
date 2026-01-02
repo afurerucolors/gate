@@ -8,9 +8,8 @@ export default {
                 defprice: '40',
                 upgrades: [
                     {desc: '+ Character', price: '35'},
-                    {desc: 'Background', price: '30'},
+                    {desc: 'Background', price: '25'},
                     {desc: 'Companion', price: '20'},
-
                 ],
                 color: 'rgb(202, 222, 238)',
             },

@@ -10,45 +10,51 @@ export default {
         displayedArts: [],
         illustrations: [
             {
-                title: "Arlecchino \"The Father\"",
-                src: 'arlecchino.jpg',
+                title: "「Honkai Star Rail」Topaz",
+                src: "2024_05_topaz.jpg",
             },
             {
-                title: "Phobos",
-                src: "phobos.jpg",
+                title: "「Chainsawman」Denji & Reze",
+                src: "2025_07_Chainsa_man_Denreze.jpg",
             },
             {
-                title: "Marco The Phoenix",
-                src: "marco.jpg",
+                title: "「Dandadan」Acrobatic Silky",
+                src: '2024_11_acrobatic_silky.jpg',
             },
             {
-                title: "Raiden Ei",
-                src: "raiden.jpg",
+                title: "「Dandadan」Seiko Ayase",
+                src: "2024_10_Seiko_Ayase_(classroom).jpg",
             },
             {
-                title: "Shopping",
-                src: "zhongli.jpg",
+                title: "「Arcane」TimeBomb",
+                src: "2024_12_timebomb.jpg",
             },
             {
-                title: "Cyberpunk: Edgerunners - Lucy & David",
-                src: "cyberpunk_edgerunners.jpg",
+                title: "「Honkai Star Rail」Anaxa & Aglaea",
+                src: "2025_05_aglanaxa.jpg",
             },
             {
-                title: "Suzume Iwato",
-                src: "suzume.jpg",
+                title: "「Honkai Star Rail」Magic Academy Trailblazers",
+                src: "2025_04_multiverse_vistas.jpg",
             },
             {
-                title: "Yor Forger",
-                src: "yor.jpg",
+                title: "「One Piece」Maid Outfits",
+                src: "2025_06_One_Piece_(Maid_outfits).jpg",
             },
             {
-                title: "Yelan",
-                src: "yelan.jpg",
+                title: "「Genshin Impact」Dainsleif & Oz",
+                src: "2025_06_dainsleif.jpg",
+            },
+           
+            {
+                title: "【Original】Orange Girl",
+                src: "2025_04_original.jpg",
             },
             {
-                title: "Denji & Makima",
-                src: "denji_makima.jpg",
+                title: "Azuki Shao",
+                src: "2025_04_azuki_shao.jpg",
             },
+           
         ],
     },
     mutations: {

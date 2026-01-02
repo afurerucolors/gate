@@ -7,8 +7,12 @@
             <v-row justify="center" class="c-text-title"> FAQ </v-row>
             <v-row class=" c-faq-container" justify="center">
               <v-col>
+                <v-card-text class="text-center c-text-body">
+                 Please don't use my works for AI Learning or NFT. 
+              </v-card-text>
+              </v-col>
+              <v-col>
                 <v-list rounded>
-
                   <v-list-group no-action >
                     <template v-slot:activator>
                       <v-list-item-content>
@@ -18,11 +22,9 @@
                       </v-list-item-content>
                     </template>
                     <v-list-item-content class="px-4">
-                      Outside of commission or work illustrations, I don't see any problem with it.
+                      Yes, there is no problem with it. Thank you! 🍀
                     </v-list-item-content>
                   </v-list-group>
-
-
                   <v-list-group>
                     <template v-slot:activator>
                       <v-list-item-content>
@@ -32,11 +34,9 @@
                       </v-list-item-content>
                     </template>
                     <v-list-item-content class="px-4">
-                      Outside of commission or work illustrations, I don't see any problem with it. Please include the
-                      original link or source when you do.
+                      No problem! Please include the original link or source when you do.
                     </v-list-item-content>
                   </v-list-group>
-
                   <v-list-group>
                     <template v-slot:activator>
                       <v-list-item-content>
@@ -46,11 +46,9 @@
                       </v-list-item-content>
                     </template>
                     <v-list-item-content class="px-4">
-                      Clip Studio Paint Pro
+                      I use Clip Studio Paint Pro
                     </v-list-item-content>
                   </v-list-group>
-
-
                   <v-list-group>
                     <template v-slot:activator>
                       <v-list-item-content>
